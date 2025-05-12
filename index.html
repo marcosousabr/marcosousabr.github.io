@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORAS EXTRAS - COPASA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>HORAS EXTRAS - COPASA</h1>
+<br/>
+<br/>
+    <div class="form-group">
+        <label for="codigoAlerta">Código de Alerta:</label>
+        <input type="text" id="codigoAlerta">
+    </div>
+    <div class="form-group">
+        <label for="unidadeAtendida">Unidade Atendida:</label>
+        <input type="text" id="unidadeAtendida">
+    </div>
+    <div class="form-group">
+        <label for="situacaoTermino">Situação ao término:</label>
+        <input type="text" id="situacaoTermino">
+    </div>
+    <button onclick="gerarTexto()">Gerar Texto</button>
+
+<br/>
+<br/>
+    <div class="form-group">
+        <label for="resultado">Texto Gerado:</label>
+        <textarea id="resultado" rows="3" readonly></textarea>
+    </div>
+    <button onclick="copiarTexto()">Copiar Texto</button>
+
+    <script>
+        function gerarTexto() {
+            var codigoAlerta = document.getElementById('codigoAlerta').value;
+            var unidadeAtendida = document.getElementById('unidadeAtendida').value;
+            var situacaoTermino = document.getElementById('situacaoTermino').value;
+            var texto = 'Código: ' + codigoAlerta + ' - Unidade: ' + unidadeAtendida + ' - Situação: ' + situacaoTermino;
+            document.getElementById('resultado').value = texto;
+        }
+
+        function copiarTexto() {
+            var texto = document.getElementById('resultado');
+            texto.select();
+            texto.setSelectionRange(0, 99999); // Para dispositivos móveis
+            document.execCommand('copy');
+            alert('Texto copiado: ' + texto.value);
+        }
+    </script>
+</body>
+</html>
+
