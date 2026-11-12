@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300" role="img" aria-labelledby="title desc">
+  <title id="title">Soluções Personalizadas</title>
+  <desc id="desc">Ilustração animada de uma plataforma de Business Intelligence com dashboards, dados conectados e indicadores.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064b3b"/>
+      <stop offset="100%" stop-color="#0a7a52"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#123f38"/>
+      <stop offset="100%" stop-color="#0d302c"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#001d17" flood-opacity=".35"/>
+    </filter>
+    <style>
+      .ui { font-family: Arial, Helvetica, sans-serif; }
+      .float { animation: float 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .float2 { animation: float 4.8s ease-in-out .7s infinite; transform-box: fill-box; transform-origin: center; }
+      .pulse { animation: pulse 2.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .draw { stroke-dasharray: 215; stroke-dashoffset: 215; animation: draw 2.5s ease-out .6s forwards; }
+      .blink { animation: blink 1.8s ease-in-out infinite; }
+      .bars { animation: bars 2.5s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: bottom; }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+      @keyframes pulse { 0%,100% { transform: scale(1); opacity: .9; } 50% { transform: scale(1.13); opacity: 1; } }
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+      @keyframes blink { 0%,84%,100% { opacity: 1; } 90% { opacity: .3; } }
+      @keyframes bars { from { transform: scaleY(.82); } to { transform: scaleY(1); } }
+    </style>
+  </defs>
+
+  <!-- Fundo verde com cantos quadrados -->
+  <rect width="500" height="300" fill="url(#bg)"/>
+  <path d="M0 238 L500 175 V300 H0Z" fill="#053b31" opacity=".38"/>
+  <path d="M0 44 L500 0 V22 L0 65Z" fill="#64d5a2" opacity=".08"/>
+
+  <!-- Título -->
+  <g class="ui" fill="#fff">
+    <text x="32" y="58" font-size="27" font-weight="700" letter-spacing=".2">Soluções</text>
+    <text x="32" y="84" font-size="27" font-weight="700" letter-spacing=".2">Personalizadas</text>
+    <text x="468" y="62" text-anchor="end" font-size="13" font-weight="700" fill="#b7f4d0" letter-spacing="1.8">BUSINESS</text>
+    <text x="468" y="79" text-anchor="end" font-size="13" font-weight="700" fill="#b7f4d0" letter-spacing="1.8">INTELLIGENCE</text>
+  </g>
+
+  <!-- Núcleo de dados conectado -->
+  <g class="float" filter="url(#shadow)">
+    <circle cx="310" cy="58" r="25" fill="#0d5d46" stroke="#72e6ad" stroke-width="2"/>
+    <circle cx="310" cy="58" r="9" fill="#6ce8aa" class="pulse"/>
+    <g stroke="#b8f6d1" stroke-width="2" fill="none">
+      <path d="M310 49 V35 M302 61 L287 69 M318 61 L333 69"/>
+      <circle cx="310" cy="33" r="4" fill="#d8ffe6"/>
+      <circle cx="284" cy="71" r="4" fill="#d8ffe6"/>
+      <circle cx="336" cy="71" r="4" fill="#d8ffe6"/>
+    </g>
+  </g>
+
+  <!-- Cartão de KPIs -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="109" width="145" height="132" fill="url(#panel)" stroke="#43bd86" stroke-opacity=".35"/>
+    <rect x="30" y="109" width="145" height="7" fill="#54d49a"/>
+    <g class="ui">
+      <text x="46" y="135" font-size="10" fill="#9bdabd" letter-spacing="1.2">KPIs EM FOCO</text>
+      <text x="46" y="169" font-size="29" font-weight="700" fill="#fff">94,6%</text>
+      <text x="47" y="188" font-size="10" fill="#8ed6b3">performance geral</text>
+      <path d="M47 213 C63 206 65 218 79 205 S98 210 110 194 S132 199 157 181" fill="none" stroke="#6ce8aa" stroke-width="3" class="draw"/>
+      <circle cx="157" cy="181" r="4" fill="#fff" class="blink"/>
+      <path d="M47 220 H158" stroke="#315b50" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- Dashboard central com gráfico de barras -->
+  <g filter="url(#shadow)">
+    <rect x="190" y="109" width="155" height="132" fill="url(#panel)" stroke="#43bd86" stroke-opacity=".35"/>
+    <g class="ui">
+      <text x="207" y="135" font-size="10" fill="#9bdabd" letter-spacing="1.1">VISÃO ANALÍTICA</text>
+      <path d="M207 216 H328 M207 190 H328 M207 164 H328" stroke="#315b50" stroke-width="1"/>
+      <g class="bars">
+        <rect x="217" y="184" width="15" height="32" fill="#67e5aa"/>
+        <rect x="242" y="172" width="15" height="44" fill="#51c991"/>
+        <rect x="267" y="151" width="15" height="65" fill="#e2bd50"/>
+        <rect x="292" y="164" width="15" height="52" fill="#66cde0"/>
+      </g>
+      <text x="219" y="229" font-size="8" fill="#77b79c">Q1</text>
+      <text x="244" y="229" font-size="8" fill="#77b79c">Q2</text>
+      <text x="269" y="229" font-size="8" fill="#77b79c">Q3</text>
+      <text x="294" y="229" font-size="8" fill="#77b79c">Q4</text>
+    </g>
+  </g>
+
+  <!-- Cartão de insights -->
+  <g filter="url(#shadow)">
+    <rect x="360" y="109" width="110" height="132" fill="url(#panel)" stroke="#43bd86" stroke-opacity=".35"/>
+    <g class="ui">
+      <text x="375" y="135" font-size="10" fill="#9bdabd" letter-spacing="1">INSIGHTS</text>
+      <g class="pulse">
+        <path d="M415 151 L420 161 L431 162 L423 170 L425 181 L415 176 L405 181 L407 170 L399 162 L410 161Z" fill="#e4c45e" stroke="#fff0a5" stroke-width="1"/>
+      </g>
+      <text x="375" y="201" font-size="10" fill="#b5e9cd">Dados que</text>
+      <text x="375" y="216" font-size="10" fill="#b5e9cd">geram decisões</text>
+      <circle cx="377" cy="229" r="3" fill="#6ce8aa"/>
+      <text x="386" y="233" font-size="9" fill="#8ed6b3">atualizado</text>
+    </g>
+  </g>
+
+  <!-- Faixa inferior de integrações -->
+  <g class="ui">
+    <rect x="30" y="260" width="440" height="1" fill="#72d8a8" opacity=".35"/>
+    <text x="47" y="281" font-size="10" fill="#b5e9cd">DADOS CONECTADOS</text>
+    <g transform="translate(171 272)">
+      <circle cx="8" cy="8" r="6" fill="none" stroke="#8eeabc" stroke-width="2"/>
+      <circle cx="29" cy="8" r="6" fill="none" stroke="#8eeabc" stroke-width="2"/>
+      <path d="M14 8 H23" stroke="#8eeabc" stroke-width="2"/>
+      <text x="42" y="12" font-size="10" fill="#b5e9cd">ERP</text>
+    </g>
+    <g transform="translate(275 271)" class="float2">
+      <path d="M2 14 L11 3 L20 14Z" fill="none" stroke="#8eeabc" stroke-width="2"/>
+      <circle cx="11" cy="10" r="2" fill="#8eeabc"/>
+      <text x="29" y="13" font-size="10" fill="#b5e9cd">CRM</text>
+    </g>
+    <g transform="translate(370 271)">
+      <path d="M0 7 H21 M10 0 V15" stroke="#8eeabc" stroke-width="2"/>
+      <text x="30" y="12" font-size="10" fill="#b5e9cd">API</text>
+    </g>
+  </g>
+</svg>
